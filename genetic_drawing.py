@@ -249,7 +249,8 @@ class DNA:
         y_max = int(posY + (rows - rows/2))
         x_min = int(posX - cols/2)
         x_max = int(posX + (cols - cols/2))
-        
+        rangeY = y_max - y_min
+        rangeX = x_max - x_min
         # Convert uint8 to float
         foreground = myClr[0:rows, 0:cols].astype(float)
         background = inImg[y_min:y_max,x_min:x_max].astype(float) #get ROI
